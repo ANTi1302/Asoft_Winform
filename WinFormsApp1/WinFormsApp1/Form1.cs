@@ -24,6 +24,7 @@ namespace WinFormsApp1
             loadData();
 
         }
+        //load data vào grid
         private void loadData()
         {
             con = new SqlConnection(connection);
@@ -63,7 +64,7 @@ namespace WinFormsApp1
             formToOpen.Show();
         }
 
-
+        // xử lý chọn dòng
         private void clickMaNV(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
@@ -73,6 +74,7 @@ namespace WinFormsApp1
             }
 
             txtMa = data.Rows[row]["UserID"].ToString();
+            // set textBox vào form2 khi nhấn chọn dòng của form1
             formToOpen1.SetTextBoxValue(data.Rows[row]["UserID"].ToString());
             formToOpen1.SetTextBoxValue2(data.Rows[row]["UserName"].ToString());
             formToOpen1.SetTextBoxValue4(data.Rows[row]["Email"].ToString());
@@ -80,13 +82,15 @@ namespace WinFormsApp1
             formToOpen1.SetTextBoxValue5(data.Rows[row]["Password"].ToString());
             formToOpen1.SetTextBoxValue1(data.Rows[row]["Password"].ToString());
             formToOpen1.SetButton2("Cập nhật", Button2ClickHandler);
+            // ẩn nút nhập lại
             formToOpen1.SetButtonDisnable();
             //formToOpen1.SetButton2Click(Button2ClickHandler);
 
         }
+        // Xử lý sự kiện Click Cập nhật của form2
         private void Button2ClickHandler(object sender, EventArgs e)
         {
-            // Xử lý sự kiện Click của button2 Cập nhật của form2
+           
 
             txtName = formToOpen1.GetTextBoxValue2();
             txtEmail = formToOpen1.GetTextBoxValue4();
@@ -94,7 +98,8 @@ namespace WinFormsApp1
             txtPass = formToOpen1.GetTextBoxValue5();
             con = new SqlConnection(connection);
             con.Open();
-
+            
+            //câu lệnh update
             string sqlInsert2 = ("update NguoiDung set UserName=N'" + txtName + "', Email=N'" + txtEmail + "', Tel=N'" + txtTel + "', Password='" + txtPass + "', Disable=1 where UserID= N'" + txtMa + "'");
 
             cmd = new SqlCommand(sqlInsert2, con);
@@ -102,6 +107,7 @@ namespace WinFormsApp1
 
             con.Close();
         }
+        // sử lý khi nhấn nút Sửa để mở form2
         private void xoaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (formToOpen1 == null || formToOpen1.IsDisposed)
@@ -124,10 +130,11 @@ namespace WinFormsApp1
                 cmd.ExecuteNonQuery();
 
                 con.Close();
+                //load lại grid khi đã xóa dòng
                 loadData();
             }
         }
-
+        // sử lý nút Tải lại
         private void button4_Click(object sender, EventArgs e)
         {
             loadData();

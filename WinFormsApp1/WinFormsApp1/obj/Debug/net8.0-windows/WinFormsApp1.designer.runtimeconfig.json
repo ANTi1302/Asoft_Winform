@@ -13,7 +13,8 @@
     ],
     "additionalProbingPaths": [
       "C:\\Users\\ANTi\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ANTi\\.nuget\\packages"
+      "C:\\Users\\ANTi\\.nuget\\packages",
+      "C:\\Program Files (x86)\\MESCIUS\\ComponentOne\\WinForms\\bin\\v8"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

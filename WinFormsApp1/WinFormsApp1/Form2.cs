@@ -31,10 +31,11 @@ namespace WinFormsApp1
             label10.Text = "";
             label11.Text = "";
         }
-        // Phương thức công khai để thiết lập giá trị cho textBox1
+        // Phương thức công khai để thiết lập giá trị cho các textBox của form2 khi form1 muốn sử dụng
         public void SetTextBoxValue(string value)
         {
             textBox1.Text = value;
+            //khóa mã khi nhấn Sửa
             textBox1.Enabled = false;
         }
         public void SetButtonDisnable()
@@ -81,14 +82,14 @@ namespace WinFormsApp1
         {
             return textBox5.Text;
         }
-
+        // set lại nút Cập nhật
         public void SetButton2(string value, EventHandler handler)
         {
             button2.Text = value;
             button2.Click += handler;
         }
 
-
+        // xử lý nút Đóng
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -174,7 +175,7 @@ namespace WinFormsApp1
                     int valueToSave = checkBox1.Checked ? 1 : 0;
                     con = new SqlConnection(connection);
                     con.Open();
-
+                    // câu lệnh thêm NguoiDung
                     string sqlInsert = "Insert into NguoiDung (UserID, UserName, Email, Password, Tel, Disable) Values ('" + txtMaNV + "',N' " + txtHo + "',N' " + txtEmail + "',N' " + txtPass + "',N' " + txtTel + "',N' " + valueToSave + "')";
                     cmd = new SqlCommand(sqlInsert, con);
                     cmd.ExecuteNonQuery();
@@ -183,7 +184,7 @@ namespace WinFormsApp1
                 }
             }
         }
-
+        // xử lý nút Nhập lại
         private void button1_Click(object sender, EventArgs e)
         {
             label8.Text = "";
@@ -200,6 +201,8 @@ namespace WinFormsApp1
 
 
         }
+
+        //kiểm tra mật khẩu khi nhập lại
         private void txtNhapLaiMatKhau_Leave(object sender, EventArgs e)
         {
             // Kiểm tra xem mật khẩu và mật khẩu nhập lại có trùng nhau hay không

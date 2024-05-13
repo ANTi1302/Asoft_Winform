@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iVnuXXkB2rKNEB01Gpj2HvG9uf6dowA/kLBA8V17CgGVIHZ3xHNxqA/A+ws/n/vq8oKEY+Ut65QXKxnhpQ48Fg==",
+  "dgSpecHash": "4epQT4/an2lDRt8L6ofut3jWqdIw3P9Fr7lKl+bOdb2AiwEdxhrP89w508KloZK5yZfRMvxrEK2HyqQnjPAVlw==",
   "success": true,
-  "projectFilePath": "E:\\TRAINING_2024\\Win_FORM\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "E:\\TRAINING_2024\\Asoft_Winform\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ANTi\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ANTi\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
