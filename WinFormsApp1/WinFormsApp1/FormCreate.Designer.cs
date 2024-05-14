@@ -45,10 +45,10 @@
             button2 = new Button();
             button3 = new Button();
             label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
+            lblMaNV = new Label();
+            lblTenNV = new Label();
+            lblEmail = new Label();
+            lblMatKhau = new Label();
             SuspendLayout();
             // 
             // label1
@@ -168,7 +168,7 @@
             button1.TabIndex = 13;
             button1.Text = "Nhập tiếp";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += btnThemNhanVien;
+            button1.Click += btnNhapLai;
             // 
             // button2
             // 
@@ -198,51 +198,51 @@
             label7.Size = new Size(0, 20);
             label7.TabIndex = 16;
             // 
-            // label8
+            // lblMaNV
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(240, 62);
-            label8.Name = "label8";
-            label8.Size = new Size(50, 20);
-            label8.TabIndex = 17;
-            label8.Text = "label8";
+            lblMaNV.AutoSize = true;
+            lblMaNV.Location = new Point(240, 62);
+            lblMaNV.Name = "lblMaNV";
+            lblMaNV.Size = new Size(67, 20);
+            lblMaNV.TabIndex = 17;
+            lblMaNV.Text = "lblMaNV";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(243, 117);
-            label9.Name = "label9";
-            label9.Size = new Size(50, 20);
-            label9.TabIndex = 18;
-            label9.Text = "label9";
+            lblTenNV.AutoSize = true;
+            lblTenNV.Location = new Point(243, 117);
+            lblTenNV.Name = "lblTenNV";
+            lblTenNV.Size = new Size(49, 20);
+            lblTenNV.TabIndex = 18;
+            lblTenNV.Text = "lblTen";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(240, 173);
-            label10.Name = "label10";
-            label10.Size = new Size(58, 20);
-            label10.TabIndex = 19;
-            label10.Text = "label10";
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new Point(240, 173);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(63, 20);
+            lblEmail.TabIndex = 19;
+            lblEmail.Text = "lblEmail";
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(243, 339);
-            label11.Name = "label11";
-            label11.Size = new Size(58, 20);
-            label11.TabIndex = 20;
-            label11.Text = "label11";
+            lblMatKhau.AutoSize = true;
+            lblMatKhau.Location = new Point(243, 339);
+            lblMatKhau.Name = "lblMatKhau";
+            lblMatKhau.Size = new Size(85, 20);
+            lblMatKhau.TabIndex = 20;
+            lblMatKhau.Text = "lblMatKhau";
             // 
-            // Form2
+            // FormCreate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(653, 450);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
+            Controls.Add(lblMatKhau);
+            Controls.Add(lblEmail);
+            Controls.Add(lblTenNV);
+            Controls.Add(lblMaNV);
             Controls.Add(label7);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -260,7 +260,7 @@
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Name = "Form2";
+            Name = "FormCreate";
             Text = "Form2";
             ResumeLayout(false);
             PerformLayout();
@@ -285,9 +285,9 @@
         private Button button2;
         private Button button3;
         private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
+        private Label lblMaNV;
+        private Label lblTenNV;
+        private Label lblEmail;
+        private Label lblMatKhau;
     }
 }

@@ -26,10 +26,10 @@ namespace WinFormsApp1
         {
 
             InitializeComponent();
-            label8.Text = "";
-            label9.Text = "";
-            label10.Text = "";
-            label11.Text = "";
+            lblMaNV.Text = "";
+            lblTenNV.Text = "";
+            lblEmail.Text = "";
+            lblMatKhau.Text = "";
         }
         // Phương thức công khai để thiết lập giá trị cho các textBox của form2 khi form1 muốn sử dụng
         public void SetTextBoxValue(string value)
@@ -113,7 +113,7 @@ namespace WinFormsApp1
                 if (string.IsNullOrWhiteSpace(txtMaNV))
                 {
 
-                    label8.Text = "Mã nhân viên không được để trống.";
+                    lblMaNV.Text = "Mã nhân viên không được để trống.";
                     isError = true;
 
 
@@ -132,12 +132,12 @@ namespace WinFormsApp1
 
                     if (existingUserCount > 0)
                     {
-                        label8.Text = "Mã người dùng đã tồn tại.";
+                        lblMaNV.Text = "Mã người dùng đã tồn tại.";
                         isError = true;
                     }
                     else
                     {
-                        label8.Text = "";
+                        lblMaNV.Text = "";
                     }
 
                     con.Close();
@@ -148,24 +148,24 @@ namespace WinFormsApp1
                 {
 
 
-                    label9.Text = "Tên nhân viên không được để trống.";
+                    lblTenNV.Text = "Tên nhân viên không được để trống.";
                     isError = true;
 
                 }
                 else
                 {
-                    label9.Text = "";
+                    lblTenNV.Text = "";
                 }
                 // kiểm tra email hợp lệ
                 if (!match.Success)
                 {
 
-                    label10.Text = "Email nhân viên không hợp lệ.";
+                    lblEmail.Text = "Email nhân viên không hợp lệ.";
                     isError = true;
                 }
                 else
                 {
-                    label10.Text = "";
+                    lblEmail.Text = "";
                 }
 
 
@@ -187,10 +187,10 @@ namespace WinFormsApp1
         // xử lý nút Nhập lại
         private void btnNhapLai(object sender, EventArgs e)
         {
-            label8.Text = "";
-            label9.Text = "";
-            label10.Text = "";
-            label11.Text = "";
+            lblMaNV.Text = "";
+            lblTenNV.Text = "";
+            lblEmail.Text = "";
+            lblMatKhau.Text = "";
 
             textBox1.Text = "";
             textBox2.Text = "";
@@ -213,6 +213,6 @@ namespace WinFormsApp1
             }
         }
 
-        
+       
     }
 }
