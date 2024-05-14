@@ -32,7 +32,7 @@ namespace WinFormsApp1
             lblMatKhau.Text = "";
         }
         // Phương thức công khai để thiết lập giá trị cho các textBox của form2 khi form1 muốn sử dụng
-        public void SetTextBoxValue(string value)
+        public void SetTxtMaNVValue(string value)
         {
             txbMaNV.Text = value;
             //khóa mã khi nhấn Sửa
@@ -42,43 +42,39 @@ namespace WinFormsApp1
         {
             btnNhapTiep.Enabled = false;
         }
-        public void SetTextBoxValue1(string value)
+        public void SetTxtNhapLaiMKValue(string value)
         {
             txbNhapLaiMK.Text = value;
         }
-        public string GetTextBoxValue1()
-        {
-            return txbNhapLaiMK.Text;
-        }
-        public void SetTextBoxValue2(string value)
+        public void SetTxtTenNV2(string value)
         {
             txbTenNV.Text = value;
         }
-        public string GetTextBoxValue2()
+        public string GetTxtTenValue()
         {
             return txbTenNV.Text;
         }
-        public void SetTextBoxValue3(string value)
+        public void SetTxtSDTValue(string value)
         {
             txbSDT.Text = value;
         }
-        public string GetTextBoxValue3()
+        public string GetTxbSDTValue3()
         {
             return txbSDT.Text;
         }
-        public void SetTextBoxValue4(string value)
+        public void SetTxtEmailValue(string value)
         {
             txbEmail.Text = value;
         }
-        public string GetTextBoxValue4()
+        public string GetTxbEmailValue()
         {
             return txbEmail.Text;
         }
-        public void SetTextBoxValue5(string value)
+        public void SetTxtMKValue(string value)
         {
             txbMK.Text = value;
         }
-        public string GetTextBoxValue5()
+        public string GetTxbMKValue()
         {
             return txbMK.Text;
         }

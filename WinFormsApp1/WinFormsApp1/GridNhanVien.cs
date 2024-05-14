@@ -75,12 +75,12 @@ namespace WinFormsApp1
 
             txtMa = data.Rows[row]["UserID"].ToString();
             // set textBox vào formCreate khi nhấn chọn dòng của gridNhanVien
-            formToOpen1.SetTextBoxValue(data.Rows[row]["UserID"].ToString());
-            formToOpen1.SetTextBoxValue2(data.Rows[row]["UserName"].ToString());
-            formToOpen1.SetTextBoxValue4(data.Rows[row]["Email"].ToString());
-            formToOpen1.SetTextBoxValue3(data.Rows[row]["Tel"].ToString());
-            formToOpen1.SetTextBoxValue5(data.Rows[row]["Password"].ToString());
-            formToOpen1.SetTextBoxValue1(data.Rows[row]["Password"].ToString());
+            formToOpen1.SetTxtMaNVValue(data.Rows[row]["UserID"].ToString());
+            formToOpen1.SetTxtTenNV2(data.Rows[row]["UserName"].ToString());
+            formToOpen1.SetTxtEmailValue(data.Rows[row]["Email"].ToString());
+            formToOpen1.SetTxtSDTValue(data.Rows[row]["Tel"].ToString());
+            formToOpen1.SetTxtMKValue(data.Rows[row]["Password"].ToString());
+            formToOpen1.SetTxtNhapLaiMKValue(data.Rows[row]["Password"].ToString());
             formToOpen1.SetBtnCapNhat("Cập nhật", btnCapNhatFormCreate);
             // ẩn nút nhập lại
             formToOpen1.SetButtonDisnable();
@@ -92,10 +92,10 @@ namespace WinFormsApp1
         {
 
 
-            txtName = formToOpen1.GetTextBoxValue2();
-            txtEmail = formToOpen1.GetTextBoxValue4();
-            txtTel = formToOpen1.GetTextBoxValue3();
-            txtPass = formToOpen1.GetTextBoxValue5();
+            txtName = formToOpen1.GetTxtTenValue();
+            txtEmail = formToOpen1.GetTxbEmailValue();
+            txtTel = formToOpen1.GetTxbSDTValue3();
+            txtPass = formToOpen1.GetTxbMKValue();
             con = new SqlConnection(connection);
             con.Open();
 
