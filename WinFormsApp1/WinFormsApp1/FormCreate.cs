@@ -13,7 +13,7 @@ using System.Xml.Linq;
 
 namespace WinFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class FormCreate : Form
     {
         string connection = @"Data Source=DESKTOP;Initial Catalog=Asoft_Demo;User ID=sa;Password=sapassword";
         SqlConnection con;
@@ -22,7 +22,7 @@ namespace WinFormsApp1
         DataTable data = new DataTable();
 
 
-        public Form2()
+        public FormCreate()
         {
 
             InitializeComponent();
@@ -83,19 +83,19 @@ namespace WinFormsApp1
             return textBox5.Text;
         }
         // set lại nút Cập nhật
-        public void SetButton2(string value, EventHandler handler)
+        public void SetBtnCapNhat(string value, EventHandler handler)
         {
             button2.Text = value;
             button2.Click += handler;
         }
 
         // xử lý nút Đóng
-        private void button3_Click(object sender, EventArgs e)
+        private void btnClose(object sender, EventArgs e)
         {
             this.Close();
         }
         // sử lý nút Thêm
-        private void button2_Click(object sender, EventArgs e)
+        private void btnThemNhanVien(object sender, EventArgs e)
         {
             if (button2.Text.Equals("Lưu"))
             {
@@ -185,7 +185,7 @@ namespace WinFormsApp1
             }
         }
         // xử lý nút Nhập lại
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNhapLai(object sender, EventArgs e)
         {
             label8.Text = "";
             label9.Text = "";
@@ -213,6 +213,6 @@ namespace WinFormsApp1
             }
         }
 
-       
+        
     }
 }

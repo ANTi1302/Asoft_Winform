@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form2
+    partial class FormCreate
     {
         /// <summary>
         /// Required designer variable.
@@ -168,7 +168,7 @@
             button1.TabIndex = 13;
             button1.Text = "Nhập tiếp";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += btnThemNhanVien;
             // 
             // button2
             // 
@@ -178,7 +178,7 @@
             button2.TabIndex = 14;
             button2.Text = "Lưu";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += btnThemNhanVien;
             // 
             // button3
             // 
@@ -188,7 +188,7 @@
             button3.TabIndex = 15;
             button3.Text = "Đóng";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button3.Click += btnClose;
             // 
             // label7
             // 

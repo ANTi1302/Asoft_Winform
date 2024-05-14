@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form1
+    partial class GridNhanVien
     {
         /// <summary>
         ///  Required designer variable.
@@ -138,7 +138,7 @@
             xoaToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.E;
             xoaToolStripMenuItem.Size = new Size(168, 24);
             xoaToolStripMenuItem.Text = "Sửa";
-            xoaToolStripMenuItem.Click += xoaToolStripMenuItem_Click;
+            xoaToolStripMenuItem.Click += editToolStripMenuItem_Click;
             // 
             // xoaToolStripMenuItem1
             // 
@@ -156,7 +156,7 @@
             button2.TabIndex = 2;
             button2.Text = "Đóng";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += btnClickClose;
             // 
             // button3
             // 
@@ -175,9 +175,9 @@
             button4.TabIndex = 4;
             button4.Text = "Tải lại";
             button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            button4.Click += btbTaiLai;
             // 
-            // Form1
+            // GridNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -187,7 +187,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
-            Name = "Form1";
+            Name = "GridNhanVien";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             contextMenuStrip1.ResumeLayout(false);
