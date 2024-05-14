@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txbMaNV = new TextBox();
+            txbTenNV = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txbSDT = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            txbEmail = new TextBox();
             label4 = new Label();
-            textBox5 = new TextBox();
+            txbMK = new TextBox();
             label5 = new Label();
-            textBox6 = new TextBox();
+            txbNhapLaiMK = new TextBox();
             label6 = new Label();
             checkBox1 = new CheckBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnNhapTiep = new Button();
+            btnLuu = new Button();
+            btnClose = new Button();
             label7 = new Label();
             lblMaNV = new Label();
             lblTenNV = new Label();
@@ -60,19 +60,19 @@
             label1.TabIndex = 0;
             label1.Text = "Mã nhân viên";
             // 
-            // textBox1
+            // txbMaNV
             // 
-            textBox1.Location = new Point(240, 27);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(238, 27);
-            textBox1.TabIndex = 1;
+            txbMaNV.Location = new Point(240, 27);
+            txbMaNV.Name = "txbMaNV";
+            txbMaNV.Size = new Size(238, 27);
+            txbMaNV.TabIndex = 1;
             // 
-            // textBox2
+            // txbTenNV
             // 
-            textBox2.Location = new Point(240, 85);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(238, 27);
-            textBox2.TabIndex = 3;
+            txbTenNV.Location = new Point(240, 85);
+            txbTenNV.Name = "txbTenNV";
+            txbTenNV.Size = new Size(238, 27);
+            txbTenNV.TabIndex = 3;
             // 
             // label2
             // 
@@ -83,12 +83,12 @@
             label2.TabIndex = 2;
             label2.Text = "Tên nhân viên";
             // 
-            // textBox3
+            // txbSDT
             // 
-            textBox3.Location = new Point(240, 196);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(238, 27);
-            textBox3.TabIndex = 5;
+            txbSDT.Location = new Point(240, 196);
+            txbSDT.Name = "txbSDT";
+            txbSDT.Size = new Size(238, 27);
+            txbSDT.TabIndex = 5;
             // 
             // label3
             // 
@@ -99,12 +99,12 @@
             label3.TabIndex = 4;
             label3.Text = "Email";
             // 
-            // textBox4
+            // txbEmail
             // 
-            textBox4.Location = new Point(240, 140);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(238, 27);
-            textBox4.TabIndex = 7;
+            txbEmail.Location = new Point(240, 140);
+            txbEmail.Name = "txbEmail";
+            txbEmail.Size = new Size(238, 27);
+            txbEmail.TabIndex = 7;
             // 
             // label4
             // 
@@ -115,13 +115,13 @@
             label4.TabIndex = 6;
             label4.Text = "Số điện thoại";
             // 
-            // textBox5
+            // txbMK
             // 
-            textBox5.Location = new Point(240, 253);
-            textBox5.Name = "textBox5";
-            textBox5.PasswordChar = '*';
-            textBox5.Size = new Size(238, 27);
-            textBox5.TabIndex = 9;
+            txbMK.Location = new Point(240, 253);
+            txbMK.Name = "txbMK";
+            txbMK.PasswordChar = '*';
+            txbMK.Size = new Size(238, 27);
+            txbMK.TabIndex = 9;
             // 
             // label5
             // 
@@ -132,14 +132,14 @@
             label5.TabIndex = 8;
             label5.Text = "Mật khẩu";
             // 
-            // textBox6
+            // txbNhapLaiMK
             // 
-            textBox6.Location = new Point(240, 309);
-            textBox6.Name = "textBox6";
-            textBox6.PasswordChar = '*';
-            textBox6.Size = new Size(238, 27);
-            textBox6.TabIndex = 11;
-            textBox6.Leave += txtNhapLaiMatKhau_Leave;
+            txbNhapLaiMK.Location = new Point(240, 309);
+            txbNhapLaiMK.Name = "txbNhapLaiMK";
+            txbNhapLaiMK.PasswordChar = '*';
+            txbNhapLaiMK.Size = new Size(238, 27);
+            txbNhapLaiMK.TabIndex = 11;
+            txbNhapLaiMK.Leave += txtNhapLaiMatKhau_Leave;
             // 
             // label6
             // 
@@ -160,35 +160,35 @@
             checkBox1.Text = "Không hiển thị";
             checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnNhapTiep
             // 
-            button1.Location = new Point(158, 390);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 13;
-            button1.Text = "Nhập tiếp";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += btnNhapLai;
+            btnNhapTiep.Location = new Point(158, 390);
+            btnNhapTiep.Name = "btnNhapTiep";
+            btnNhapTiep.Size = new Size(94, 29);
+            btnNhapTiep.TabIndex = 13;
+            btnNhapTiep.Text = "Nhập tiếp";
+            btnNhapTiep.UseVisualStyleBackColor = true;
+            btnNhapTiep.Click += btnNhapLai;
             // 
-            // button2
+            // btnLuu
             // 
-            button2.Location = new Point(304, 390);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 14;
-            button2.Text = "Lưu";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += btnThemNhanVien;
+            btnLuu.Location = new Point(304, 390);
+            btnLuu.Name = "btnLuu";
+            btnLuu.Size = new Size(94, 29);
+            btnLuu.TabIndex = 14;
+            btnLuu.Text = "Lưu";
+            btnLuu.UseVisualStyleBackColor = true;
+            btnLuu.Click += btnThemNhanVien;
             // 
-            // button3
+            // btnClose
             // 
-            button3.Location = new Point(442, 390);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 15;
-            button3.Text = "Đóng";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += btnClose;
+            btnClose.Location = new Point(442, 390);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(94, 29);
+            btnClose.TabIndex = 15;
+            btnClose.Text = "Đóng";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += this.btnClickClose;
             // 
             // label7
             // 
@@ -207,7 +207,7 @@
             lblMaNV.TabIndex = 17;
             lblMaNV.Text = "lblMaNV";
             // 
-            // label9
+            // lblTenNV
             // 
             lblTenNV.AutoSize = true;
             lblTenNV.Location = new Point(243, 117);
@@ -216,7 +216,7 @@
             lblTenNV.TabIndex = 18;
             lblTenNV.Text = "lblTen";
             // 
-            // label10
+            // lblEmail
             // 
             lblEmail.AutoSize = true;
             lblEmail.Location = new Point(240, 173);
@@ -225,7 +225,7 @@
             lblEmail.TabIndex = 19;
             lblEmail.Text = "lblEmail";
             // 
-            // label11
+            // lblMatKhau
             // 
             lblMatKhau.AutoSize = true;
             lblMatKhau.Location = new Point(243, 339);
@@ -244,21 +244,21 @@
             Controls.Add(lblTenNV);
             Controls.Add(lblMaNV);
             Controls.Add(label7);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnClose);
+            Controls.Add(btnLuu);
+            Controls.Add(btnNhapTiep);
             Controls.Add(checkBox1);
-            Controls.Add(textBox6);
+            Controls.Add(txbNhapLaiMK);
             Controls.Add(label6);
-            Controls.Add(textBox5);
+            Controls.Add(txbMK);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(txbEmail);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(txbSDT);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txbTenNV);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txbMaNV);
             Controls.Add(label1);
             Name = "FormCreate";
             Text = "Form2";
@@ -269,16 +269,16 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txbMaNV;
+        private TextBox txbTenNV;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txbSDT;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox txbEmail;
         private Label label4;
-        private TextBox textBox5;
+        private TextBox txbMK;
         private Label label5;
-        private TextBox textBox6;
+        private TextBox txbNhapLaiMK;
         private Label label6;
         private CheckBox checkBox1;
         private Button button1;
@@ -289,5 +289,8 @@
         private Label lblTenNV;
         private Label lblEmail;
         private Label lblMatKhau;
+        private Button btnNhapTiep;
+        private Button btnLuu;
+        private Button btnClose;
     }
 }

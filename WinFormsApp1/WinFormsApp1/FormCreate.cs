@@ -34,76 +34,76 @@ namespace WinFormsApp1
         // Phương thức công khai để thiết lập giá trị cho các textBox của form2 khi form1 muốn sử dụng
         public void SetTextBoxValue(string value)
         {
-            textBox1.Text = value;
+            txbMaNV.Text = value;
             //khóa mã khi nhấn Sửa
-            textBox1.Enabled = false;
+            txbMaNV.Enabled = false;
         }
         public void SetButtonDisnable()
         {
-            button1.Enabled = false;
+            btnNhapTiep.Enabled = false;
         }
         public void SetTextBoxValue1(string value)
         {
-            textBox6.Text = value;
+            txbNhapLaiMK.Text = value;
         }
         public string GetTextBoxValue1()
         {
-            return textBox6.Text;
+            return txbNhapLaiMK.Text;
         }
         public void SetTextBoxValue2(string value)
         {
-            textBox2.Text = value;
+            txbTenNV.Text = value;
         }
         public string GetTextBoxValue2()
         {
-            return textBox2.Text;
+            return txbTenNV.Text;
         }
         public void SetTextBoxValue3(string value)
         {
-            textBox3.Text = value;
+            txbSDT.Text = value;
         }
         public string GetTextBoxValue3()
         {
-            return textBox3.Text;
+            return txbSDT.Text;
         }
         public void SetTextBoxValue4(string value)
         {
-            textBox4.Text = value;
+            txbEmail.Text = value;
         }
         public string GetTextBoxValue4()
         {
-            return textBox4.Text;
+            return txbEmail.Text;
         }
         public void SetTextBoxValue5(string value)
         {
-            textBox5.Text = value;
+            txbMK.Text = value;
         }
         public string GetTextBoxValue5()
         {
-            return textBox5.Text;
+            return txbMK.Text;
         }
         // set lại nút Cập nhật
         public void SetBtnCapNhat(string value, EventHandler handler)
         {
-            button2.Text = value;
-            button2.Click += handler;
+            btnLuu.Text = value;
+            btnLuu.Click += handler;
         }
 
         // xử lý nút Đóng
-        private void btnClose(object sender, EventArgs e)
+        private void btnClickClose(object sender, EventArgs e)
         {
             this.Close();
         }
         // sử lý nút Thêm
         private void btnThemNhanVien(object sender, EventArgs e)
         {
-            if (button2.Text.Equals("Lưu"))
+            if (btnLuu.Text.Equals("Lưu"))
             {
-                string txtMaNV = textBox1.Text.Trim().ToUpper();
-                string txtHo = textBox2.Text;
-                string txtEmail = textBox4.Text;
-                string txtPass = textBox6.Text;
-                string txtTel = textBox3.Text;
+                string txtMaNV = txbMaNV.Text.Trim().ToUpper();
+                string txtHo = txbTenNV.Text;
+                string txtEmail = txbEmail.Text;
+                string txtPass = txbNhapLaiMK.Text;
+                string txtTel = txbSDT.Text;
                 string pattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
                 bool isError = false;
 
@@ -192,12 +192,12 @@ namespace WinFormsApp1
             lblEmail.Text = "";
             lblMatKhau.Text = "";
 
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox4.Text = "";
-            textBox3.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
+            txbMaNV.Text = "";
+            txbTenNV.Text = "";
+            txbEmail.Text = "";
+            txbSDT.Text = "";
+            txbMK.Text = "";
+            txbNhapLaiMK.Text = "";
 
 
         }
@@ -206,10 +206,10 @@ namespace WinFormsApp1
         private void txtNhapLaiMatKhau_Leave(object sender, EventArgs e)
         {
             // Kiểm tra xem mật khẩu và mật khẩu nhập lại có trùng nhau hay không
-            if (textBox5.Text != textBox6.Text)
+            if (txbMK.Text != txbNhapLaiMK.Text)
             {
                 MessageBox.Show("Mật khẩu nhập lại không khớp. Vui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox5.Focus(); // Di chuyển trỏ chuột đến TextBox nhập lại mật khẩu để người dùng có thể nhập lại
+                txbMK.Focus(); // Di chuyển trỏ chuột đến TextBox nhập lại mật khẩu để người dùng có thể nhập lại
             }
         }
 

@@ -41,7 +41,7 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             xoaToolStripMenuItem = new ToolStripMenuItem();
             xoaToolStripMenuItem1 = new ToolStripMenuItem();
-            button2 = new Button();
+            btnClose = new Button();
             button3 = new Button();
             button4 = new Button();
             themToolStripMenuItem = new ToolStripMenuItem();
@@ -148,15 +148,15 @@
             xoaToolStripMenuItem1.Text = "Xóa";
             xoaToolStripMenuItem1.Click += xoaToolStripMenuItem1_Click;
             // 
-            // button2
+            // btnClose
             // 
-            button2.Location = new Point(636, 386);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 2;
-            button2.Text = "Đóng";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += btnClickClose;
+            btnClose.Location = new Point(636, 386);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(94, 29);
+            btnClose.TabIndex = 2;
+            btnClose.Text = "Đóng";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClickClose;
             // 
             // button3
             // 
@@ -184,7 +184,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button4);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnClose);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Name = "GridNhanVien";
@@ -198,7 +198,7 @@
 
         private DataGridView dataGridView1;
         private Button button1;
-        private Button button2;
+        private Button btnClose;
         private Button button3;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem themToolStripMenuItem;
